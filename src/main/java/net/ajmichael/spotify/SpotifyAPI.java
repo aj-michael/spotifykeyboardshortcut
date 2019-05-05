@@ -6,6 +6,7 @@ final class SpotifyAPI {
   static final String CLIENT_SECRET = "";
   static final String AUTHORIZATION_CODE = "";
   static final String ACCESS_TOKEN = "";
+  static final String REFRESH_TOKEN = "";
 
   static final String AUTHORIZE_REDIRECT_URI = "http://localhost:8909";
   static final String PLAY_URL = "https://api.spotify.com/v1/me/player/play";

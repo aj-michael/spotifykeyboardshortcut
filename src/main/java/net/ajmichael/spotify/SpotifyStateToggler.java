@@ -4,15 +4,17 @@ import java.io.IOException;
 
 class SpotifyStateToggler {
 
-  enum State { ON, OFF };
+  enum State {ON, OFF}
+
+  ;
 
   private State state;
   private final SpotifyCommander commander;
 
 
-  SpotifyStateToggler() {
+  SpotifyStateToggler(AccessToken accessToken) throws IOException {
     this.state = State.OFF;
-    this.commander = new SpotifyCommander(SpotifyAPI.ACCESS_TOKEN);
+    this.commander = new SpotifyCommander(new SpotifyAPIRequester(accessToken));
   }
 
   final void toggleState() {
